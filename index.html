@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" ng-app = "searchApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Search and Data Analytics</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Libraries -->
+    <script src="lib/angular.min.js"></script>
+    <!-- Modules -->
+    <script src="src/searchApp.module.js"></script>
+    <!-- 'search-app' module artifacts -->
+    <script src="src/searchApp.controller.js"></script>
+</head>
+<body>
+    <h1>Data Search and Analytics</h1>
+    <div ng-controller="SearchController as searchCtrl">
+
+        <div id = "tableDiv">
+            <table>
+                <tr>
+                    <th>Datasets</th>
+                </tr>
+                <tr ng-repeat = "dataset in searchCtrl.datasets" ng-click="searchCtrl.selectedDataset=searchCtrl.datasets[$index];">
+                    <td>{{$index+1}}. {{dataset}}</td>
+                </tr>
+            </table><br>
+            <span id = "spanIf" ng-if="searchCtrl.datasets.length===0">No datasets Available!</span>
+        </div>
+
+        <div id="tabsDiv" ng-init="tabselector = 'firsttab'">
+            <h3>Dataset selected : {{searchCtrl.selectedDataset}}<span ng-if="searchCtrl.selectedDataset===''">None (select by clicking on the dataset name)</span>
+            <button ng-if="searchCtrl.selectedDataset!==''" ng-click="searchCtrl.selectedDataset=''">Reset</button></h3>
+            <div id="tabTitles">
+                <span class="tab" ng-click="tabselector = 'firsttab'" ng-class="{'activetab' : tabselector == 'firsttab'}">Search</span>
+                <span class="tab" ng-click="tabselector = 'secondtab'" ng-class="{'activetab' : tabselector == 'secondtab'}">Tags</span>
+                <span class="tab" ng-click="tabselector = 'thirdtab'" ng-class="{'activetab' : tabselector == 'thirdtab'}">Analytics</span>
+                <span class="tab" ng-click="tabselector = 'fourthtab'" ng-class="{'activetab' : tabselector == 'fourthtab'}">Files</span>
+                <span class="tab" ng-click="tabselector = 'fifthtab'" ng-class="{'activetab' : tabselector == 'fifthtab'}">Graph</span>
+            </div>
+            <br>
+            <div class="box">
+                <br>
+                <div ng-if="tabselector == 'firsttab'">
+                    Tab 1 Content
+                </div>
+                <div ng-if="tabselector == 'secondtab'">
+                    Tab 2 Content
+                </div>
+                <div ng-if="tabselector == 'thirdtab'">
+                    Tab 3 Content
+                </div>
+                <div ng-if="tabselector == 'fourthtab'">
+                    Tab 4 Content
+                </div>
+                <div ng-if="tabselector == 'fifthtab'">
+                    Tab 4 Content
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

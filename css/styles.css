@@ -1,0 +1,80 @@
+body{
+    margin : 0px;
+}
+h1{
+    text-align : center;
+    background-image : linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
+    margin : 0px;
+    padding : 4vh;
+}
+#tableDiv{
+    float:left;
+    height: 86vh;
+    overflow: auto;
+    width: 20vw;
+    background: #E8E8E8;
+}
+#tableDiv table{
+    font-size: 110%;
+    border-spacing: 3px;
+    width:100%;
+}
+#tableDiv table tr th{
+    position: sticky;
+    top: 0;
+    text-align : left;
+    background-color: #808000;
+    padding: 20px 0px 20px 27px;
+    color: #FFFFFF;
+    font-family : Arial;
+    font-size:120%;
+}
+#tableDiv table tr td{
+    font-family : Arial;
+    font-size : 95%;
+    white-space: nowrap;
+    background-color: yellowgreen;
+    padding: 10px;
+}
+#tableDiv table tr td:hover{
+    background-color:#90EE90;
+}
+#spanIf{
+    font-family : Arial;
+    padding:25px;
+    font-size:120%;
+    color:red;
+}
+h3{
+    font-family:Arial;
+    background-image: linear-gradient(to right, skyblue, white);
+    margin:3px;
+    padding:2vh;
+}
+#tabsDiv{
+    float:left;
+    height: 86vh;
+    width:80vw;
+    background:#E8E8F7;
+    overflow: auto;
+}
+.tab{
+    background:white;
+    font-size:150%;
+    padding:3px 20px 3px 20px;
+    margin-left:3px;
+    border-radius:10px;
+}
+.tab:hover{
+    background:lightgrey;
+}
+.activetab {
+   color: black;
+   border-bottom: 3px solid #2d2d2d;
+   background-color:lightgrey;
+}
+.box{
+    background-color : white;
+    margin:3px;
+    border-radius:10px;
+}
