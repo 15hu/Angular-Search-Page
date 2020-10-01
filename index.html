@@ -25,7 +25,6 @@
 
             <div id="tabTitles" ng-init="tabselector = 'searchTab'">
                 <span class="tab" ng-click="tabselector = 'searchTab'" ng-class="{'activetab' : tabselector == 'searchTab'}">Search</span>
-                <span class="tab" ng-click="tabselector = 'tagsTab'" ng-class="{'activetab' : tabselector == 'tagsTab'}">Tags</span>
                 <span class="tab" ng-click="tabselector = 'analyticsTab'" ng-class="{'activetab' : tabselector == 'analyticsTab'}">Analytics</span>
                 <span class="tab" ng-click="tabselector = 'filesTab'" ng-class="{'activetab' : tabselector == 'filesTab'}">Files</span>
                 <span class="tab" ng-click="tabselector = 'summaryTab'" ng-class="{'activetab' : tabselector == 'summaryTab'}">Graph</span>
@@ -42,17 +41,16 @@
                     <span ng-if="searchCtrl.checkButton();">Please select a dataset and enter a keyword.</span>
                     <div ng-if="searchCtrl.searchPerformed" id="searchResult">
                         <div id="showId">
-                            <li ng-repeat="item in searchCtrl.searchResults">
-                                id : {{item._id}}<br>   content : {{item._source}}
-                            </li>
+                            <table>
+                                <tr ng-repeat="item in searchCtrl.searchResults" ng-click="searchCtrl.viewThisSearchFile($index)">
+                                    <td>{{item._id}}</td>
+                                </tr>
+                            </table>
                         </div>
-                        <div id="showcontent">
-
+                        <div id="showSource">
+                            {{searchCtrl.viewSearchFile}}
                         </div>
                     </div>
-                </div>
-                <div id = "tagsTab" ng-if="tabselector == 'tagsTab'">
-                    Tab 2 Content
                 </div>
                 <div id = "analyticsTab" ng-if="tabselector == 'analyticsTab'">
                     Tab 3 Content

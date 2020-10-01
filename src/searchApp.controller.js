@@ -51,7 +51,44 @@ function SearchController(){
         {
             _id : "file 5",
             _source : "file 5 content"
-        }
+        },
+                 {
+                     _id : "file 2",
+                     _source : "file 2 content"
+                 },
+                 {
+                     _id : "file 3",
+                     _source : "file 3 content"
+                 },
+                 {
+                     _id : "file 4",
+                     _source : "file 4 content"
+                 },
+                 {
+                     _id : "file 5",
+                     _source : "file 5 content"
+                 },
+                          {
+                              _id : "file 2",
+                              _source : "file 2 content"
+                          },
+                          {
+                              _id : "file 3",
+                              _source : "file 3 content"
+                          },
+                          {
+                              _id : "file 4",
+                              _source : "file 4 content"
+                          },
+                          {
+                              _id : "file 5",
+                              _source : "file 5 content"
+                          }
     ];
+
+    searchCtrl.viewSearchFile = "Please Select a file.";
+    searchCtrl.viewThisSearchFile = function(index){
+        searchCtrl.viewSearchFile = searchCtrl.searchResults[index]._source;
+    }
 }
 })();

@@ -100,6 +100,39 @@ h3{
     border: 2px solid;
     border-radius:10px;
     padding: 10px;
-    overflow:auto;
     text-align:left;
+}
+#showId{
+    border:1px solid;
+    background-color:lightgrey;
+    float:left;
+    height:94.5%;
+    width:20%;
+    padding:10px;
+    overflow:auto;
+    margin-right:10px;
+}
+#showId table{
+    background: red;
+    width:100%;
+}
+#showId table tr td{
+    background:white;
+    width:20px;
+    font-family : Arial;
+    font-size : 95%;
+    white-space: nowrap;
+    padding: 10px;
+}
+#showId table tr td:hover{
+    background-color:lightyellow;
+}
+#showSource{
+    border:1px solid;
+    background-color:#E8E8F7;
+    float:left;
+    padding:10px;
+    height:94.5%;
+    width:75%;
+    overflow:auto;
 }
