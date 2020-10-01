@@ -13,12 +13,12 @@ function SearchController(){
 
     //dataset selected by user or index in which search is to be performed
     searchCtrl.selectedDataset = undefined;
-
+    searchCtrl.tagToSearch = undefined;
     //Keyword entered by the user to search in the index 'searchCtrl.selectedDataset'
     searchCtrl.keywordToSearch = undefined;
 
     searchCtrl.checkButton = function(){
-        if(searchCtrl.selectedDataset === undefined || searchCtrl.keywordToSearch === undefined){
+        if(searchCtrl.selectedDataset === undefined || searchCtrl.keywordToSearch === undefined || searchCtrl.tagToSearch === undefined){
             return true;
         }
         else{

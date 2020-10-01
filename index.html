@@ -2,10 +2,12 @@
 <html lang="en" ng-app = "searchApp">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Search and Data Analytics</title>
     <link rel="stylesheet" href="css/styles.css">
     <!-- Libraries -->
     <script src="lib/angular.min.js"></script>
+    <script src="lib/angucomplete-alt.min.js"></script>
     <!-- Modules -->
     <script src="src/searchApp.module.js"></script>
     <!-- 'search-app' module artifacts -->
@@ -35,10 +37,19 @@
             <div class="box">
                 <div id = "searchTab" ng-if="tabselector == 'searchTab'">
                     <h2>Search by Keyword</h2>
-                    <input type="text" ng-model="searchCtrl.keywordToSearch" placeholder="Enter the keyword" required>
+                    Tag : <input type="text" ng-model="searchCtrl.tagToSearch" placeholder="Enter the tag" required>&nbsp;
+                    Keyword : <input type="text" ng-model="searchCtrl.keywordToSearch" placeholder="Enter the keyword" required>
                     <button ng-disabled="searchCtrl.checkButton();" ng-click="searchCtrl.performSearch();">Search</button>
                     <br><br>
-                    <span ng-if="searchCtrl.checkButton();">Please select a dataset and enter a keyword.</span>
+                    <span ng-if="searchCtrl.checkButton();">Please select a dataset, enter a tag and a keyword.</span>
+                    <input list="browsers" name="browser">
+                    <datalist id="browsers">
+                        <option value="Internet Explorer">
+                        <option value="Firefox">
+                        <option value="Chrome">
+                        <option value="Opera">
+                        <option value="Safari">
+                    </datalist>
                     <div ng-if="searchCtrl.searchPerformed" id="searchResult">
                         <div id="showId">
                             <table>
