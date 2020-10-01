@@ -42,14 +42,6 @@
                     <button ng-disabled="searchCtrl.checkButton();" ng-click="searchCtrl.performSearch();">Search</button>
                     <br><br>
                     <span ng-if="searchCtrl.checkButton();">Please select a dataset, enter a tag and a keyword.</span>
-                    <input list="browsers" name="browser">
-                    <datalist id="browsers">
-                        <option value="Internet Explorer">
-                        <option value="Firefox">
-                        <option value="Chrome">
-                        <option value="Opera">
-                        <option value="Safari">
-                    </datalist>
                     <div ng-if="searchCtrl.searchPerformed" id="searchResult">
                         <div id="showId">
                             <table>
