@@ -1,6 +1,5 @@
 body{
     margin : 0px;
-    overflow:auto;
     height:100%;
 }
 h1{
@@ -19,16 +18,15 @@ h1{
 }
 #tableDiv table{
     font-size: 110%;
-    border-spacing: 3px;
+    border-spacing: 0.4vh;
     width:100%;
-    height:100%;
 }
 #tableDiv table tr th{
     position: sticky;
     top: 0;
     text-align : left;
     background-color: #808000;
-    padding: 20px 0px 20px 27px;
+    padding: 11% 0% 11% 13.5%;
     color: #FFFFFF;
     font-family : Arial;
     font-size:120%;
@@ -38,21 +36,21 @@ h1{
     font-size : 95%;
     white-space: nowrap;
     background-color: yellowgreen;
-    padding: 10px;
+    padding: 4%;
 }
 #tableDiv table tr td:hover{
     background-color:#90EE90;
 }
 #spanIf{
     font-family : Arial;
-    padding:25px;
+    padding:10%;
     font-size:120%;
     color:red;
 }
 h3{
     font-family:Arial;
     background-image: linear-gradient(to right, skyblue, white);
-    margin:3px;
+    margin:0.4vh;
     padding:2vh;
 }
 #tabsDiv{
@@ -66,7 +64,7 @@ h3{
     background:white;
     font-size:150%;
     padding:3px 20px 3px 20px;
-    margin-left:3px;
+    margin-left:0.4vh;
     border-radius:10px;
 }
 .tab:hover{
@@ -80,27 +78,27 @@ h3{
 #searchTab{
     background:white;
     text-align:center;
-    border-radius:10px;
+    border-radius:1vw;
     height:72vh;
-    padding:10px;
-    margin:3px;
+    padding:0.5vh;
 }
 #searchTab input{
     width:200px;
     height:25px;
-    padding:3px;
+    font-size:90%;
+    padding:0.4vh;
 }
 #searchTab button{
     width:100px;
-    height:31px;
+    height:35px;
 }
 #searchTab span{
     color:red;
 }
 #searchResult{
-    height:50vh;
+    height:70%;
     border: 2px solid;
-    border-radius:10px;
+    border-radius:0.5vh;
     padding: 10px;
     text-align:left;
     overflow:auto;
