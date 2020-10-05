@@ -53,9 +53,34 @@
                 <div id = "analyticsTab" ng-if="tabselector == 'analyticsTab'">
                     Tab 3 Content
                 </div>
+
+
                 <div id = "filesTab" ng-if="tabselector == 'filesTab'">
-                    Tab 4 Content
+                    <h2>Files in the Dataset</h2>
+                    <div id="fileView">
+                        <div id="fileIdView">
+                            <div id="fileSearchBox">
+                                <angucomplete placeholder="Search File Name" pause="100" selectedobject="searchCtrl.selectedFileObject" localdata="searchCtrl.allFiles" searchfields="_id" titlefield="_id" minlength="1" inputclass="form-control form-control-small" matchclass="highlight" />
+                            </div>
+                            <button ng-disabled="searchCtrl.selectedFileObject===null" ng-click="searchCtrl.viewFileName = searchCtrl.selectedFileObject.title;
+        searchCtrl.viewFile = searchCtrl.selectedFileObject.originalObject._source;">View</button>
+                            <br><br>
+                            <div id="fileIdTable">
+                                <table>
+                                    <tr ng-repeat="item in searchCtrl.allFiles" ng-click="searchCtrl.viewThisFile($index)">
+                                        <td>{{item._id}}</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div id="fileContentView">
+                            File Selected : {{searchCtrl.viewFileName}}<br><br>
+                            {{searchCtrl.viewFile}}
+                        </div>
+                    </div>
                 </div>
+
+
                 <div id = "summaryTab" ng-if="tabselector == 'summaryTab'">
                     Tab 5 Content
                 </div>

@@ -32,7 +32,7 @@ function SearchController(){
     searchCtrl.performSearch = function(){
         searchCtrl.searchPerformed = true;
     };
-    searchCtrl.searchResults=[
+    searchCtrl.allFiles=[
         {
             _id : "file 1",
             _source : "file 1 content"
@@ -53,47 +53,74 @@ function SearchController(){
             _id : "file 5",
             _source : "file 5 content"
         },
-                 {
-                     _id : "file 2",
-                     _source : "file 2 content"
-                 },
-                 {
-                     _id : "file 3",
-                     _source : "file 3 content"
-                 },
-                 {
-                     _id : "file 4",
-                     _source : "file 4 content"
-                 },
-                 {
-                     _id : "file 5",
-                     _source : "file 5 content"
-                 },
-                          {
-                              _id : "file 2",
-                              _source : "file 2 content"
-                          },
-                          {
-                              _id : "file 3",
-                              _source : "file 3 content"
-                          },
-                          {
-                              _id : "file 4",
-                              _source : "file 4 content"
-                          },
-                          {
-                              _id : "file 5",
-                              _source : "file 5 content"
-                          }
+        {
+            _id : "file 6",
+            _source : "file 6 content"
+        },
+        {
+            _id : "file 7",
+            _source : "file 7 content"
+        },
+        {
+            _id : "file 8",
+            _source : "file 8 content"
+        },
+        {
+            _id : "file 9",
+            _source : "file 9 content"
+        },
+        {
+            _id : "file 10",
+            _source : "file 10 content"
+        },
+        {
+            _id : "file 11",
+            _source : "file 11 content"
+        },
+        {
+            _id : "file 12",
+            _source : "file 12 content"
+        },
+        {
+            _id : "file 13",
+            _source : "file 13 content"
+        }
     ];
+
+    searchCtrl.searchResults=[
+            {
+                _id : "file 1",
+                _source : "file 1 content"
+            },
+            {
+                _id : "file 2",
+                _source : "file 2 content"
+            },
+            {
+                _id : "file 3",
+                _source : "file 3 content"
+            },
+            {
+                _id : "file 4",
+                _source : "file 4 content"
+            },
+            {
+                _id : "file 5",
+                _source : "file 5 content"
+            }];
 
     searchCtrl.viewSearchFile = "Please Select a file.";
     searchCtrl.viewThisSearchFile = function(index){
         searchCtrl.viewSearchFile = searchCtrl.searchResults[index]._source;
     }
-
-
-    this.tags = [
+    searchCtrl.viewFileName = "None."
+    searchCtrl.viewFile = "Please select a file.";
+    searchCtrl.viewThisFile = function(index){
+        searchCtrl.viewFileName = searchCtrl.allFiles[index]._id;
+        searchCtrl.viewFile = searchCtrl.allFiles[index]._source;
+    }
+    searchCtrl.selectedFileObject = null;
+    searchCtrl.tags = [
                 {name: 'tag1', code: '1'},
                 {name: 'tag2', code: '2'},
                 {name: 'tag3', code: '3'},
