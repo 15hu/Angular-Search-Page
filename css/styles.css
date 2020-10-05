@@ -1,11 +1,10 @@
 body{
-    margin : 0px;
-    height:100%;
+    margin : 0vh 0vw 0vh 0vw;
 }
 h1{
     text-align : center;
     background-image : linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
-    margin : 0px;
+    margin : 0vh 0vw 0vh 0vw;
     padding : 3vh;
 }
 #tableDiv{
@@ -26,7 +25,7 @@ h1{
     top: 0;
     text-align : left;
     background-color: #808000;
-    padding: 11% 0% 11% 13.5%;
+    padding: 30px 20px 30px 30px;
     color: #FFFFFF;
     font-family : Arial;
     font-size:120%;
@@ -36,7 +35,7 @@ h1{
     font-size : 95%;
     white-space: nowrap;
     background-color: yellowgreen;
-    padding: 4%;
+    padding: 15px;
 }
 #tableDiv table tr td:hover{
     background-color:#90EE90;
@@ -63,17 +62,17 @@ h3{
 .tab{
     background:white;
     font-size:150%;
-    padding:3px 20px 3px 20px;
+    padding:0.5vh 2vw 0.5vh 2vw;
     margin-left:0.4vh;
-    border-radius:10px;
+    border-radius:0.9vw;
 }
 .tab:hover{
     background:lightgrey;
 }
 .activetab {
    color: black;
-   border-bottom: 3px solid #2d2d2d;
-   background-color:lightgrey;
+   border-bottom: solid #2d2d2d;
+   background-color: lightgrey;
 }
 #searchTab{
     background:white;
@@ -83,35 +82,35 @@ h3{
     padding:0.5vh;
 }
 #searchTab input{
-    width:200px;
-    height:25px;
+    width:15vw;
+    height:3vh;
     font-size:90%;
     padding:0.4vh;
 }
 #searchTab button{
-    width:100px;
-    height:35px;
+    width:80px;
+    height:4.5vh;
 }
 #searchTab span{
     color:red;
 }
 #searchResult{
     height:70%;
-    border: 2px solid;
+    border: solid;
     border-radius:0.5vh;
-    padding: 10px;
+    padding: 1vh 0.7vw 1vh 0.7vw;
     text-align:left;
     overflow:auto;
 }
 #showId{
-    border:1px solid;
+    border: 1px solid;
     background-color:lightgrey;
     float:left;
     height:94.5%;
     width:20%;
-    padding:10px;
+    padding:1vh 1vw 1vh 1vw;
     overflow:auto;
-    margin-right:10px;
+    margin-right:1vw;
 }
 #showId table{
     background: red;
@@ -132,9 +131,9 @@ h3{
     border:1px solid;
     background-color:#E8E8F7;
     float:left;
-    padding:10px;
+    padding:1vh 1vw 1vh 1vw;
     height:94.5%;
-    width:75%;
+    width:70%;
     overflow:auto;
 }
 .autoComBox{
