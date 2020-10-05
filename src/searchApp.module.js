@@ -1,5 +1,5 @@
 (function() {
 'use strict';
-angular.module("searchApp",[]);
+angular.module("searchApp", ["ngTouch","angucomplete"]);
 
 })();

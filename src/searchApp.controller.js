@@ -13,12 +13,13 @@ function SearchController(){
 
     //dataset selected by user or index in which search is to be performed
     searchCtrl.selectedDataset = undefined;
-    searchCtrl.tagToSearch = undefined;
     //Keyword entered by the user to search in the index 'searchCtrl.selectedDataset'
     searchCtrl.keywordToSearch = undefined;
 
+    searchCtrl.selectedTagObject = null;
+
     searchCtrl.checkButton = function(){
-        if(searchCtrl.selectedDataset === undefined || searchCtrl.keywordToSearch === undefined || searchCtrl.tagToSearch === undefined){
+        if(searchCtrl.selectedDataset === undefined || searchCtrl.keywordToSearch === undefined || searchCtrl.selectedTagObject === null){
             return true;
         }
         else{
@@ -90,5 +91,23 @@ function SearchController(){
     searchCtrl.viewThisSearchFile = function(index){
         searchCtrl.viewSearchFile = searchCtrl.searchResults[index]._source;
     }
+
+
+    this.tags = [
+                {name: 'tag1', code: '1'},
+                {name: 'tag2', code: '2'},
+                {name: 'tag3', code: '3'},
+                {name: 'tag4', code: '4'},
+                {name: 'tag5', code: '5'},
+                {name: 'tag6', code: '6'},
+                {name: 'tag7', code: '7'},
+                {name: 'tag8', code: '8'},
+                {name: 'tag9', code: '9'},
+                {name: 'tag10', code: '10'},
+                {name: 'tag11', code: '11'},
+                {name: 'tag12', code: '12'},
+                {name: 'tag13', code: '13'},
+                {name: 'tag14', code: '14'},
+                {name: 'tag15', code: '15'}];
 }
 })();

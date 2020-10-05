@@ -5,14 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Search and Data Analytics</title>
     <link rel="stylesheet" href="css/styles.css">
-    <!-- Libraries -->
-    <script src="lib/angular.min.js"></script>
-    <script src="lib/angucomplete-alt.min.js"></script>
-    <!-- Modules -->
-    <script src="src/searchApp.module.js"></script>
-    <!-- 'search-app' module artifacts -->
-    <script src="src/searchApp.controller.js"></script>
-    <script src="src/searchApp.component.js"></script>
+    <link rel="stylesheet" href="css/angucomplete.css">
 </head>
 <body>
     <h1>Data Search and Analytics</h1>
@@ -37,7 +30,10 @@
             <div class="box">
                 <div id = "searchTab" ng-if="tabselector == 'searchTab'">
                     <h2>Search by Keyword</h2>
-                    Tag : <input type="text" ng-model="searchCtrl.tagToSearch" placeholder="Enter the tag" required>&nbsp;
+                    Tag :
+                    <div class="autoComBox">
+                        <angucomplete placeholder="Search Tag" pause="100" selectedobject="searchCtrl.selectedTagObject" localdata="searchCtrl.tags" searchfields="name" titlefield="name" minlength="1" inputclass="form-control form-control-small" matchclass="highlight" />
+                    </div>
                     Keyword : <input type="text" ng-model="searchCtrl.keywordToSearch" placeholder="Enter the keyword" required>
                     <button ng-disabled="searchCtrl.checkButton();" ng-click="searchCtrl.performSearch();">Search</button>
                     <br><br>
@@ -68,5 +64,14 @@
         </div>
 
     </div>
+    <!-- Libraries -->
+    <script src="lib/angular.min.js"></script>
+    <script src="lib/angucomplete.js"></script>
+    <script src="lib/angular-touch.min.js"></script>
+    <!-- Modules -->
+    <script src="src/searchApp.module.js"></script>
+    <!-- 'search-app' module artifacts -->
+    <script src="src/searchApp.controller.js"></script>
+    <script src="src/searchApp.component.js"></script>
 </body>
 </html>

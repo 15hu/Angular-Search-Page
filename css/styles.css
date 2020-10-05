@@ -87,6 +87,7 @@ h3{
 #searchTab input{
     width:200px;
     height:25px;
+    padding:3px;
 }
 #searchTab button{
     width:100px;
@@ -136,4 +137,7 @@ h3{
     height:94.5%;
     width:75%;
     overflow:auto;
+}
+.autoComBox{
+    display:inline-block;
 }
