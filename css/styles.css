@@ -11,9 +11,26 @@ h1{
     display:inline-block;
     float:left;
     height: 89vh;
-    overflow: auto;
     width: 20vw;
     background: #E8E8E8;
+}
+#datasetSearchBox{
+    margin:0.4vh;
+}
+#datasetSearchBox .angucomplete-dropdown{
+    width:18.5vw;
+}
+#datasetSearchBox input{
+    width:19vw;
+    height: 35px;
+    padding:0.4vh;
+}
+#tableDiv button{
+    margin-left:0.4vh;
+}
+#datasetTable{
+    overflow: auto;
+    height:86%;
 }
 #tableDiv table{
     font-size: 110%;
@@ -83,13 +100,13 @@ h3{
 }
 #searchTab input{
     width:15vw;
-    height:3vh;
+    height:25px;
     font-size:90%;
     padding:0.4vh;
 }
 #searchTab button{
     width:80px;
-    height:4.5vh;
+    height:30px;
 }
 #searchTab span{
     color:red;
@@ -195,4 +212,18 @@ h3{
 }
 #fileIdTable table tr td:hover{
     background-color:lightyellow;
+}
+#analyticsTab{
+    background:white;
+    text-align:center;
+    border-radius:1vw;
+    height:72vh;
+    padding:0.5vh;
+}
+#summaryTab{
+    background:white;
+    text-align:center;
+    border-radius:1vw;
+    height:72vh;
+    padding:0.5vh;
 }
