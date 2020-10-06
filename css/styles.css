@@ -28,41 +28,6 @@ h1{
 #tableDiv button{
     margin-left:0.4vh;
 }
-#datasetTable{
-    overflow: auto;
-    height:86%;
-}
-#tableDiv table{
-    font-size: 110%;
-    border-spacing: 0.4vh;
-    width:100%;
-}
-#tableDiv table tr th{
-    position: sticky;
-    top: 0;
-    text-align : left;
-    background-color: #808000;
-    padding: 30px 20px 30px 30px;
-    color: #FFFFFF;
-    font-family : Arial;
-    font-size:120%;
-}
-#tableDiv table tr td{
-    font-family : Arial;
-    font-size : 95%;
-    white-space: nowrap;
-    background-color: yellowgreen;
-    padding: 15px;
-}
-#tableDiv table tr td:hover{
-    background-color:#90EE90;
-}
-#spanIf{
-    font-family : Arial;
-    padding:10%;
-    font-size:120%;
-    color:red;
-}
 h3{
     font-family:Arial;
     background-image: linear-gradient(to right, skyblue, white);

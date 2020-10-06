@@ -13,19 +13,6 @@ function DatasetView(){
                 <angucomplete placeholder="Search Dataset" pause="100" selectedobject="searchCtrl.selectedDatasetObject" localdata="searchCtrl.datasets" searchfields="name" titlefield="name" minlength="1" inputclass="form-control form-control-small" matchclass="highlight" />
             </div>
             <button ng-disabled="searchCtrl.selectedDatasetObject===null;" ng-click="searchCtrl.selectedDataset=searchCtrl.selectedDatasetObject.originalObject.name">Select</button>
-            <br><br>
-            <div id="datasetTable">
-                <table>
-                    <tr>
-                        <th>Datasets</th>
-                    </tr>
-                    <tr ng-repeat = "dataset in searchCtrl.datasets" ng-click="searchCtrl.selectedDataset=searchCtrl.datasets[$index].name;">
-                        <td>{{$index+1}}. {{dataset.name}}</td>
-                    </tr>
-                </table><br>
-                <span id = "spanIf" ng-if="searchCtrl.datasets.length===0">No datasets Available!</span>
-            </div>
-
         </div>`
     };
     return ddo;
